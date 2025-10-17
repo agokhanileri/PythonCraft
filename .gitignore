@@ -1,0 +1,90 @@
+# ========================================
+# OS: macOS System Junk
+# ========================================
+.DS_Store
+.AppleDouble
+.LSOverride
+Icon?
+._*
+
+# ========================================
+# Python Bytecode / Cache
+# ========================================
+__pycache__/
+*.py[cod]
+*$py.class
+
+# ========================================
+# Virtual Environments / Python Packaging
+# ========================================
+.venv/
+venv/
+env/
+env.*/
+.env
+.env.*/
+Pipfile.lock
+poetry.lock
+*.egg-info/
+.eggs/
+dist/
+build/
+pip-wheel-metadata/
+wheels/
+
+# ========================================
+# Jupyter / Notebooks / Temp
+# ========================================
+.ipynb_checkpoints/
+*.ipynb~
+
+# ========================================
+# Test / Coverage / Logs
+# ========================================
+.coverage
+.coverage.*
+htmlcov/
+pytest_cache/
+.tox/
+.mypy_cache/
+.dmypy.json
+.pyre/
+*.log
+
+# ========================================
+# Editors / IDE Metadata
+# ========================================
+.vscode/
+*.code-workspace
+.idea/
+*.iml
+
+# ========================================
+# Data / Cache Folders (Optional)
+# Activate if your scripts produce tmp/cache
+# ========================================
+# data/cache/
+# tmp/
+# logs/
+
+# ========================================
+# Media / Binary (Consider Git LFS)
+# Uncomment if using Git LFS
+# ========================================
+# *.mp4
+# *.mp3
+# *.wav
+# *.mov
+# *.flac
+# *.jpg
+# *.png
+# *.zip
+# *.tar
+# *.tar.gz
+
+# ========================================
+# OS / Finder Trash, thumbnails
+# ========================================
+Thumbs.db
+ehthumbs.db
+Desktop.ini
