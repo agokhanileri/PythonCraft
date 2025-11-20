@@ -251,13 +251,20 @@ print(dord)  # = OrderedDict([('A', 1), ('B', 2), ('C', 4), ('D', 3)])
 
 
 # -------------------------------------------------------------------------------------------------
-# Arrays: similar to list except single type, mutable
+# Arrays: Similar to list except single type, mutable.
+# A stdlib container that is rarely used for numeric storage since it is compact in memory.
+# typed (single primitive type: 'i', 'f', etc.)
+# faster for numeric loops compared to lists
+# rarely used in coding needed in algorithm interviews
+# rarely used in normal Python code
+
 arr1 = ar.array("i", [1, 2, 3])  # = array('i', [1, 2, 3])
 print(arr1.typecode)  # = i
 print(arr1.itemsize)  # = 4, (byte)
 print(arr1.buffer_info())  # = (4474546816, 3), mem address
 print(arr1.count(2))  # = 1, occurrences
-arr1.extend([4, 5])
+arr1.append(4)
+arr1.extend([4, 5])e
 print(arr1)  # = [1, 2, 3, 4, 5]
 arr2 = ar.array("i", [])
 print(arr2.fromlist([1, 2, 3]))  # = array('i', [1, 2, 3]), cast to ar

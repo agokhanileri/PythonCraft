@@ -1,30 +1,32 @@
 ## Description
 Python study notes with practice questions
 
+## LeetCode
+👉 [LeetCode](./leetcode/README.md)
 
 ## Content
 | Script                     | Contents                                                                                                       |
 |----------------------------|----------------------------------------------------------------------------------------------------------------|
-| 00_CleanCode               | Zen, Indentation, Commentation, Quotation, Spacing (Char/Line), Namespaces, Encoding                           |
+| 00_CleanCode               | Zen, Indentation, Commentation, Quotation, Spacing, Namespaces, Encoding                           |
 | 01_DataTypes               | Numbers, Strings, Lists, Tuples, Dictionary                                                                    |
 | 02_Conditionals            | If, For, While, Case, Continue/Break/Pass, Try/Except, Iterables (lambda, enum, filter, zip/chain)             |
-| 03_PrintIO                 | Printing, User input, File I/O, I/O module, PrettyPrint, Q                                                     |
-| 04_StacksQueues            | Stacks, Queues, Q                                                                                              |
+| 03_PrintIO                 | Printing, User input, File I/O, I/O module, PrettyPrint                                                     |
+| 04_StacksQueues            | Stacks, Queues                                                                              |
 | 05_SearchSort              | LinearSearch, BinarySearch, JumpSearch, InterpSearch, BubbleSort, QuickSort, MergeSort, InsertSort, SelectSort |
-| 06_LinkedLists             | LL Construction, LL Ops/Traversal, Q                                                                           |
-| 07_BinaryTrees             | BT Construction, BT Ops/Traversal, Q                                                                           |
-| 08_Graphs                  | Graph Construction, Graph Ops/Traversal (BFS/DFS), Q                                                           |
-| 09_HeapsTries              | Heaps, Tries, Q                                                                                                |
-| 10_BitOps                  | Boolean Ops, Bitwise Ops, Bit Math, Bit Shifting, Bit Casting, Q                                               |
-| 11_MathTheory              | Algebra, Random, Trigonometry, Random, MatrixOps, Combinatorics, Number Theory, Q                              |
-| 12_ObjectOriented          | Class, Function/Partial, Closures, Coroutines, Inheritance, Global, Iterators, Generators, Decorators, Q       |
-| 13_Testing                 | Assert, Try, Finally, Except, Speed (Timer, cProfile)                                                          |
-| 14_Advanced                | Map/Reduce, Struct, List mutation, Set override, Itertools, Date/Calendar/Time, Q                              |
-| ScriptPull                 | Classes: LinkedList, BinaryTree, Graph. Methods: clear_all, cmp, bsearch, qsort                                |
-| PracticeQ                  | Useful questions that are neither in the study scripts nor LeetCode                                            |
+| 06_LinkedLists             | LL Construction, LL Ops/Traversal                                                                           |
+| 07_BinaryTrees             | BT Construction, BT Ops/Traversal                                                                           |
+| 08_Graphs                  | Graph Construction, Graph Ops/Traversal (BFS/DFS)                                                           |
+| 09_HeapsTries              | Heaps, Tries, Q                                                                                             |
+| 10_BitOps                  | Boolean Ops, Bitwise Ops, Bit Math, Bit Shifting, Bit Casting                                               |
+| 11_MathTheory              | Algebra, Random, Trigonometry, Random, MatrixOps, Combinatorics, Number Theory                              |
+| 12_ObjectOriented          | Class, Function/Partial, Closures, Coroutines, Inheritance, Global, Iterators, Generators, Decorators       |
+| 13_Testing                 | Assert, Try, Finally, Except, Speed (Timer, cProfile)                                                       |
+| 14_Advanced                | Map/Reduce, Struct, List mutation, Set override, Itertools, Date/Calendar/Time                              |
+| ScriptPull                 | Classes: LinkedList, BinaryTree, Graph. Methods: searches, sorts, clear_all, cmp                            |
+| PracticeQ                  | Useful questions that are neither in the study scripts nor LeetCode                                         |
 
 
-### Status
+### Progress
 | Script            | Content  | Syntax | PEP  | Questions  | Comments        |
 |-------------------|----------|--------|------|-------------|-----------------|
 | 01_syntax         | OK       | OK     | OK   | N/A         |                 |
@@ -49,6 +51,9 @@ Python study notes with practice questions
 | 20_testing        | half     | OK     | none | add Ruff    |                 |
 | 21_bit_ops        | OK       | OK     | OK   | N/A         |                 |
 | 22_advanced       | OK       | OK     | OK   | N/A         |                 |
+
+
+
 
 
 ###

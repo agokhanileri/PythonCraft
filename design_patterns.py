@@ -1,5 +1,4 @@
-# Cntent: Class, Function, Partial Function, Operator Overload, Closures, Coroutines, Inheritance,
-# Global, Iterators, Generators, Decorators, Q
+# Content: 
 
 for name in dir():
     if not name.startswith("_"):
