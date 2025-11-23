@@ -14,8 +14,6 @@ dependencies:   # solver picks latest stable python available
 - mypy          		# type-checker (static)
 - pytest        			# tester
 - pre-commit    		# keeps repo clean by auto-checking during git commits
-- numpy         		# arrays, linear algebra, binary-heavy
-- matplotlib    		# plotter
 - llvm-openmp   	# multithreading API used by NumPy, SciPy, scikit-learn etc.
 - ninja         			# fast low-level build tool auto-detected by cmake
 - pkg-config    		#

@@ -5,17 +5,17 @@
 # Clarifications:
 
 # Inputs:
-s = ["H","a","n","n","a","h"]
+s = ["H", "a", "n", "n", "a", "h"]
 
 # ----------------------------------------------------------------------
 # Sol1: O() / O(1)
 n = len(s)
-mid = n // 2       
+mid = n // 2
 for i in range(0, mid):
     temp = s[-i - 1]
     s[-i - 1] = s[i]
     s[i] = temp
-    
+
 
 # ----------------------------------------------------------------------
 # Submit: Sol1, O() / O()
@@ -27,10 +27,10 @@ class Solution:
             temp = s[-i - 1]
             s[-i - 1] = s[i]
             s[i] = temp
-            
+
+
 # --------------
 # Test:
 sol = Solution()
 sol.reverseString(s)
 print(s)
-

@@ -1,4 +1,14 @@
 # ========================================
+# Projects files/folders
+# ========================================
+inputs/
+outputs/
+locks/
+.vscode/
+.gitconfig
+.secrets.baseline
+
+# ========================================
 # OS: macOS / Windows System Junk
 # ========================================
 .DS_Store

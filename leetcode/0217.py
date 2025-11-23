@@ -1,5 +1,5 @@
 # 0217. Contains Duplicate
-# Given an integer array nums, return true if any value appears at least twice in the array, 
+# Given an integer array nums, return true if any value appears at least twice in the array,
 # Return false if every element is distinct.
 
 # ----------------------------------------------------------------------
@@ -20,7 +20,7 @@ ans = False
 for k in nums:
     print(k, list(dic.keys()))
     if k in dic.keys():                # if seen before
-        ans = True        
+        ans = True
     else:
         dic[k] =+ 1             # inc count
 ans
@@ -44,6 +44,3 @@ class Solution:
 # Test:
 sol = Solution()
 print(sol.containsDuplicate(nums))
-
-
-

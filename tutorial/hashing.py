@@ -1,4 +1,4 @@
-# Contents: Stack Construction/Ops, Queue Construction/Ops, Q
+# Contents: Stack Construction/Ops, Queue Construction/Ops
 
 for var in dir():
     if not var.startswith("_"):

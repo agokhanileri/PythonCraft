@@ -1,37 +1,44 @@
 # =================================================================================================
-# Problem: 0020. Valid Parentheses
-# Link: https://leetcode.com/problems/valid-parentheses/
-# Tags: Stack, String
-# Complexity: O(n) / O(n)
-# Task: Return True if brackets in s are properly matched and nested.
+# Problem: 0009. Palindrome Number
+# Link: https://leetcode.com/problems/palindrome-number
+# Tags: Math
+# Complexity: O(log(n)) / O(1)
+#
+# Task: Given an integer x, return True if x is a palindrome.
+# Hints:
+# (1) -2^31 <= x <= 2^31 - 1
+# (2) Follow-up: Solve without converting to a string.
+# (3) Single-digit → palindrome
+# (4) Negatives → not palindrome
+# (5) Numbers ending with 0 (but not 0 itself) → not palindrome
 
 
 # =================================================================================================
 # Solution:
 class Solution:
-    def isValid(self, s: str) -> bool:
-        """Stack approach: O(n) / O(n)"""
-        # No need to check length since it's given n >=1, also we return not stack anyway
-        # pairs = {")": "(", "]": "[", "}": "{"}  # can also define as dict
-        stack = []  # stack to keep/check the order
-        for ch in s:
-            # print(ch, stack, ans)
-            if ch in ["(", "[", "{"]:  # opening --> push
-                stack.append(ch)
-            elif ch in [")", "]", "}"]:  # closing --> pop
-                if stack == []:  # no open brackets yet --> False
-                    return False
-                popped = stack.pop()
-                if (  # o.w. pop the last open pharanthesis and compare
-                    (ch == ")" and popped != "(")
-                    or (ch == "]" and popped != "[")
-                    or (ch == "}" and popped != "{")
-                ):
-                    return False  # no pair matched --> False
-                else:  # ignore other chars
-                    pass
+    def isPalindrome(self, x: int) -> bool:
+        """Reverse half of the number | O(log(n)) / O(1))"""
+        if x < 0 or (x % 10 == 0 and x != 0):  # using (4) and (5)
+            return False
+        rev = 0
+        while x > rev:
+            rev = rev * 10 + x % 10  # left shift rev + add the last number of x
+            x //= 10  # right shift x
+        return x == rev or x == rev // 10
 
-        return not stack  # True if all pass, False if any open brakcets left
+    def isPalindrome2(self, x: int) -> bool:
+        """Conver to string : O(n) / O(n))"""
+        intstr = str(x)  # integer string
+        n = len(intstr)
+        if n == 1:
+            return True
+        elif (x < 0) or (intstr[-1] == "0"):
+            return False  # no left zero padding allowed
+        else:
+            for i in range(0, n // 2):  # will miss the mid number if n is odd, but no problem
+                if intstr[i] != intstr[-1 - i]:
+                    return False  # 1 violation is enough to conclude
+        return True  # if no violations yet
 
 
 # =================================================================================================

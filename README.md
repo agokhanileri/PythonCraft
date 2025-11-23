@@ -1,68 +1,48 @@
 ## Description
-Python study notes with practice questions
+Structed Python learning path with a focus on comprehension, clarity, and minimalism
 
-## LeetCode
-👉 [LeetCode](./leetcode/README.md)
+To jump to the fun part 👉 [LeetCode](./leetcode/README.md)
 
-## Content
-| Script                     | Contents                                                                                                       |
-|----------------------------|----------------------------------------------------------------------------------------------------------------|
-| 00_CleanCode               | Zen, Indentation, Commentation, Quotation, Spacing, Namespaces, Encoding                           |
-| 01_DataTypes               | Numbers, Strings, Lists, Tuples, Dictionary                                                                    |
-| 02_Conditionals            | If, For, While, Case, Continue/Break/Pass, Try/Except, Iterables (lambda, enum, filter, zip/chain)             |
-| 03_PrintIO                 | Printing, User input, File I/O, I/O module, PrettyPrint                                                     |
-| 04_StacksQueues            | Stacks, Queues                                                                              |
-| 05_SearchSort              | LinearSearch, BinarySearch, JumpSearch, InterpSearch, BubbleSort, QuickSort, MergeSort, InsertSort, SelectSort |
-| 06_LinkedLists             | LL Construction, LL Ops/Traversal                                                                           |
-| 07_BinaryTrees             | BT Construction, BT Ops/Traversal                                                                           |
-| 08_Graphs                  | Graph Construction, Graph Ops/Traversal (BFS/DFS)                                                           |
-| 09_HeapsTries              | Heaps, Tries, Q                                                                                             |
-| 10_BitOps                  | Boolean Ops, Bitwise Ops, Bit Math, Bit Shifting, Bit Casting                                               |
-| 11_MathTheory              | Algebra, Random, Trigonometry, Random, MatrixOps, Combinatorics, Number Theory                              |
-| 12_ObjectOriented          | Class, Function/Partial, Closures, Coroutines, Inheritance, Global, Iterators, Generators, Decorators       |
-| 13_Testing                 | Assert, Try, Finally, Except, Speed (Timer, cProfile)                                                       |
-| 14_Advanced                | Map/Reduce, Struct, List mutation, Set override, Itertools, Date/Calendar/Time                              |
-| ScriptPull                 | Classes: LinkedList, BinaryTree, Graph. Methods: searches, sorts, clear_all, cmp                            |
-| PracticeQ                  | Useful questions that are neither in the study scripts nor LeetCode                                         |
-
-
-### Progress
-| Script            | Content  | Syntax | PEP  | Questions  | Comments        |
-|-------------------|----------|--------|------|-------------|-----------------|
-| 01_syntax         | OK       | OK     | OK   | N/A         |                 |
-| 02_scalars        | OK       | OK     | OK   | N/A         |                 |
-| 03_containers     | OK       | OK     | OK   | N/A         |                 |
-| 04_loops          | half     | OK     | half | add Ruff    |                 |
-| 05_functions      | half     | OK     | none | add Ruff    |                 |
-| 06_interactive    | half     | OK     | none | add Ruff    |                 |
-| 07_classes        | half     | OK     | none | expand      |                 |
-| 08_object_oriented| none     | OK     | none | start code  |                 |
-| 09_linked_list    | none     | OK     | none | start code  |                 |
-| 10_binary_trees   | none     | OK     | none | start code  |                 |
-| 11_heaps_tries    | none     | OK     | none | start code  |                 |
-| 12_hashing        | none     | OK     | none | start code  |                 |
-| 13_graphs         | none     | OK     | none | start code  |                 |
-| 14_search_algo    | none     | OK     | none | start code  |                 |
-| 15_sort_algo      | none     | OK     | none | start code  |                 |
-| 16_divide_conquer | none     | OK     | none | start code  |                 |
-| 17_greedy_algo    | none     | OK     | none | start code  |                 |
-| 18_dynamic_algo   | none     | OK     | none | start code  |                 |
-| 19_graph_algo     | none     | OK     | none | start code  |                 |
-| 20_testing        | half     | OK     | none | add Ruff    |                 |
-| 21_bit_ops        | OK       | OK     | OK   | N/A         |                 |
-| 22_advanced       | OK       | OK     | OK   | N/A         |                 |
-
-
-
-
+### Tutorial
+| #  | Script                                                                               | Rigidity | Status | Lint | Topics                                                                             |
+|----|--------------------------------------------------------------------------------------|:--------:|:------:|:----:|------------------------------------------------------------------------------------|
+| 01 | [Syntax](https://github.com/agokhanileri/PythonCraft/tutorial/syntax.py)             | Soft     | ✅     | ✅   | Zen, Docstrings, Imports, Comments, Indents, Quotes, Spacing, Namespaces, Encoding |
+| 02 | [Scalars](https://github.com/agokhanileri/PythonCraft/tutorial/scalars.py)           | Soft     | ✅     | ✅   | Numbers, Boolean, Strings, Arithmetic 👉 [MathCraft]() for more (hidden, TBD)      |
+| 03 | [Containers](https://github.com/agokhanileri/PythonCraft/tutorial/containers.py)     | Soft     | ✅     | ✅   | Lists, Tuples, Sets, Dictionary, Stacks/Queues, Collections, Arrays                |
+| 04 | [Loops](https://github.com/agokhanileri/PythonCraft/tutorial/loops.py)               | Soft     | ⚠️     | ❌   | If, For, While, Case, Continue/Break/Pass, Iterables                               |
+| 05 | [Functions](https://github.com/agokhanileri/PythonCraft/tutorial/functions.py)       | Soft     | ⚠️     | ❌   | Function, Partial, OperatorOverloading, Generator, Coroutines                      |
+| 06 | [Interactive](https://github.com/agokhanileri/PythonCraft/tutorial/interactive.py)   | Soft     | ⚠️     | ❌   | Printing, PrettyPrint, Prompting, FileHandling, ContextManagers                    |
+| 07 | [Classes](https://github.com/agokhanileri/PythonCraft/tutorial/classes.py)           | Soft     | ⚠️     | ❌   | Classes, Variables, Decorators                                                     |
+| 08 | [OOP](https://github.com/agokhanileri/PythonCraft/tutorial/object_oriented.py)       | Med      | ⚠️     | ❌   | Inheritance, Abstraction, Polymorphism, Encapsulation                              |
+| 09 | [LinkedLists](https://github.com/agokhanileri/PythonCraft/tutorial/linked_lists.py)  | Med      | ⚠️     | ❌   | Implementation, Traversals, Insert/Delete, Reverse, Circular Lists                 |
+| 10 | [BinaryTrees](https://github.com/agokhanileri/PythonCraft/tutorial/binary_trees.py)  | Med      | ⚠️     | ❌   | Implementation, Traversals (in/pre/post), Height/Balance, Views                    |
+| 11 | [HeapsTries](https://github.com/agokhanileri/PythonCraft/tutorial/heaps_tries.py)    | Med      | ⚠️     | ❌   | Min/Max, PriorityQueues, Tries, Insert/Search                                      |
+| 12 | [Hashing](https://github.com/agokhanileri/PythonCraft/tutorial/hashing.py)           | Med      | ⚠️     | ❌   | Stack Construction/Ops, Queue Construction/Ops                                     |
+| 13 | [Graphs](https://github.com/agokhanileri/PythonCraft/tutorial/graphs.py)             | Med      | ⚠️     | ❌   | Stack Construction/Ops, Queue Construction/Ops                                     |
+| 14 | [SearchAlgos](https://github.com/agokhanileri/PythonCraft/tutorial/search_algos.py)  | Med      | ✅     | ❌   | LinearSearch, BinarySearch, JumpSearch, InterpolationSearch                        |
+| 15 | [SortAlgos](https://github.com/agokhanileri/PythonCraft/tutorial/sort_algos.py)      | Med      | ✅     | ❌   | Bubble, Quick, Merge, Insertio, Selection, Heap, Counting, Radix, Bucket           |
+| 16 | [Divide&Conquer](https://github.com/agokhanileri/PythonCraft/tutorial/divide_conquer.py) | Med  | ❌     | ❌   |           |
+| 17 | [GreedyAlgos](https://github.com/agokhanileri/PythonCraft/tutorial/greedy_algos.py)  | Med      | ❌     | ❌   |           |
+| 18 | [DynamicAlgos](https://github.com/agokhanileri/PythonCraft/tutorial/dynamic_algos.py)| Med      | ❌     | ❌   |           |
+| 19 | [GraphAlgos](https://github.com/agokhanileri/PythonCraft/tutorial/graph_algos.py)    | Firm     | ❌     | ❌   |           |
+| 20 | [Testing](https://github.com/agokhanileri/PythonCraft/tutorial/testing.py)           | Firm     | ❌     | ❌   |           |
+| 21 | [BitOps](https://github.com/agokhanileri/PythonCraft/tutorial/bit_ops.py)            | Firm     | ❌     | ❌   |           |
+| 21 | [AdvancedTopics](https://github.com/agokhanileri/PythonCraft/tutorial/advanced_topics.py) | Firm| ❌     | ❌   |           |
+| HS | [HelperScripts](https://github.com/agokhanileri/PythonCraft/extras/helper_scripts.py)| ---      | ✅     | ❌   | Searches, Sorts, LL, BT, Graph, Methods (clear_all, cmp)                           |
+| PS | [PracticeSoft](https://github.com/agokhanileri/PythonCraft/extras/practice_soft.py)  | Soft     | ⚠️     | ❌   | Easy practice questions                                                            |
+| PM | [PracticeMed](https://github.com/agokhanileri/PythonCraft/extras/practice_medium.py) | Med      | ⚠️     | ❌   | Medium practice questions                                                          |
+| LC | [LeetCode](https://github.com/agokhanileri/PythonCraft/leetcode/README.md)           | Soft/Med | ---    | ---  | Easy/Medium interview questions with comments, tested & submitted                     |
 
 ###
 ## Manual
 
-<u>Requirements:</u>
-* <u>Python</u>: version 3x (3.10 is used)\
-* <u>Libraries</u>: Default libs used\
-* <u>Inputs</u>: Placed under "./data"
+<b>Requirements:</b>
+* Python: version 3.12
+* Dependencies: None, except basic CI/CD packages for linting
+* CI/CD: ruff, black, mypy, pytest, pre-commit
+* I/O: Input/Outputs for all scripts are ./inputs and ./outputs respectively.
+* Extras: Helper scripts (/helper_scripts.py) and scratch notes (random_notes.py)
+
 
 ###
 Scripts are indented to be executed line-by-line execution.
@@ -72,8 +52,6 @@ Scripts are indented to be executed line-by-line execution.
 
 ###
 <u>Study scripts:</u> Focus is comprehension and clarity
-* LeetCode Q are also omitted since they are covered in [LeetCode](./LeetCode/Leetcode.md) section
-
 
 ###
 <u>[ScriptPull.py](./ScriptPull.py):</u> Useful classes/methods to utilize in problems and projects.
@@ -81,9 +59,12 @@ Scripts are indented to be executed line-by-line execution.
   * to use methods: ``` from ScriptPull import * ```
 
 ###
-<u>Shortcuts used:</u> Although some are common sense, here we go.. <br>
-<pre>Q = Question, Ops = Operations, DS = Data Structures, BT = Binary Tree or Binary Search Tree,
-LL = Linked List, sol = solution, mod = modification, ans = answer, iter = iterate, concat =
+<u>Shortcuts used:</u> <br>
+<pre>
+Q = Question
+DS = Data Structures
+BT = Binary Tree, LL = Linked List,
+sol = solution, mod = modification, ans = answer, iter = iterate, concat =
 concatenate, lib = library, func = function,
 </pre>
 
