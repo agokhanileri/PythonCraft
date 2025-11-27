@@ -36,6 +36,11 @@ class Solution:
 
 
 # =================================================================================================
+# BigO:
+# Time: n loops x (dict_lookup + dict_insert + subtraction + comparison) = n x (1+1+1+1) = O(n)
+# Space: Stores up to n key->index pairs --> O(n)
+
+# =================================================================================================
 # Testing:
 CASES = [  # [(args, expect)]  — can be a tuple of inputs or a single value
     (([2, 7, 11, 15], 9), [0, 1]),  # Example 1

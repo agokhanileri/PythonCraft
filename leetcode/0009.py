@@ -18,12 +18,12 @@
 class Solution:
     def isPalindrome(self, x: int) -> bool:
         """Reverse half of the number | O(log(n)) / O(1))"""
-        if x < 0 or (x % 10 == 0 and x != 0):  # using (4) and (5)
+        if (x < 0) or (x % 10 == 0 and x != 0):  # using (4) and (5)
             return False
         rev = 0
         while x > rev:
-            rev = rev * 10 + x % 10  # left shift rev + add the last number of x
-            x //= 10  # right shift x
+            rev = rev * 10 + x % 10  # append last digit of x to rev (left shift)
+            x //= 10  # remove last digit from x (right shift)
         return x == rev or x == rev // 10
 
     def isPalindrome2(self, x: int) -> bool:
@@ -44,16 +44,16 @@ class Solution:
 # =================================================================================================
 # Testing:
 CASES = [
-    ("", True),
-    ("()", True),
-    ("()[]{}", True),
-    ("(]", False),
-    ("([)]", False),
-    ("{([])]}", False),
-    ("{[]}", True),
-    ("(((((((((())))))))))", True),
-    ("[", False),
-    ("]", False),
+    (121, True),
+    (-121, False),
+    (10, False),
+    (0, True),
+    (1221, True),
+    (12321, True),
+    (1001, True),
+    (100, False),
+    (11, True),
+    (-101, False),
 ]
 
 METHODS = [

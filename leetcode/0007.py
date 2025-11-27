@@ -1,40 +1,27 @@
 # =================================================================================================
-# Problem: 0013. Roman to Integer
-# Link: https://leetcode.com/problems/roman-to-integer/
-# Tags: String, Sliding Window
-# Complexity: O(1) / O(1)
+# Problem: 0007. Reverse Integer
+# Link: https://leetcode.com/problems/reverse-integer
+# Tags: Math
+# Complexity: O(log(n)) / O(1)
 #
-# Task: Given a roman numeral, convert it to an integer.
+# Task: Given a signed 32-bit integer x, return x with its digits reversed. If reversing x causes
+# the value to go outside the signed 32-bit integer range [-231, 231 - 1], then return 0.
 # Hints:
-# (1) Roman numerals are represented by 7 symbols: I, V, X, L = 50, C = 100, D = 500, M = 100
-# (2) s contains only the characters ('I', 'V', 'X', 'L', 'C', 'D', 'M')
-# (3) It is guaranteed that s is a valid roman numeral in the range [1, 3999]
-# (4) 1 <= s.length <= 15
+# (1) ...
+# (2)
 
 
 # =================================================================================================
 # Solution:
 class Solution:
-    def romanToInt(self, s: str) -> int:
-        n = len(s)
-        d = {"I": 1, "V": 5, "X": 10, "L": 50, "C": 100, "D": 500, "M": 1000}
-        res = 0  # will be summed left to right, ignoring the last element
-        for i in range(n - 1):  # From (1) and (2), AB < 0 only if A<B --> slide [AB] window
-            if d[s[i]] < d[s[i + 1]]:  # if A<B it means A is neg.
-                res -= d[s[i]]
-            else:
-                res += d[s[i]]
-            # print(i, res)  # testing
-        res += d[s[-1]]  # last element has no follower --> always positive
-        return res
+    def reverse(self, x: int) -> int:
 
 
 # =================================================================================================
 # Testing:
 CASES = [
-    ("III", 3),
-    ("LVIII", 58),
-    ("MCMXCIV", 1994),  # ans = 1000 + 900 + 90 + 4 = 1994
+    (121, True),
+    (-121, False),
 ]
 
 METHODS = [

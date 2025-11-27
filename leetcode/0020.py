@@ -1,9 +1,13 @@
 # =================================================================================================
 # Problem: 0020. Valid Parentheses
-# Link: https://leetcode.com/problems/valid-parentheses/
+# Link: https://leetcode.com/problems/valid-parentheses
 # Tags: Stack, String
 # Complexity: O(n) / O(n)
+#
 # Task: Return True if brackets in s are properly matched and nested.
+# Hints:
+# (1) s consists of parentheses only '()[]{}'.
+# (2) 1 <= s.length <= 10^4
 
 
 # =================================================================================================
@@ -33,6 +37,11 @@ class Solution:
 
         return not stack  # True if all pass, False if any open brakcets left
 
+
+# =================================================================================================
+# Complexity:
+# Time: n loops × (dict_lookup + list_push/pop + compare) = n × (1+1+1) --> O(n)
+# Space: at most n/2 open brackets in stack --> O(n)
 
 # =================================================================================================
 # Testing:
