@@ -1,1 +1,1 @@
-"""Content: Inheritance, Polymorphism, Encapsulation."""
+"""Content: IntervalSchedule, IntervalPartition, FractionalKnapsack, HuffmanCoding, MST."""

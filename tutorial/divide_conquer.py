@@ -1,4 +1,4 @@
-"""Content: Strassen, Closest Pair."""
+"""Content: CountInversions, ClosestPair, Strassen, PeakFind, FFT."""
 
 # =================================================================================================
 #

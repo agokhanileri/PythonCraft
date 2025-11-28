@@ -1,11 +1,5 @@
 # Contents: Boolean Ops, Bitwise Ops, Bit Math, Bit Shifting, Bit Casting, Questions
 
-for var in dir():
-    if not var.startswith("_"):
-        del globals()[var]
-del var
-
-
 # -----------------------------------
 # Boolean Literals
 bool(-2)  # = True, only 0 is False

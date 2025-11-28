@@ -5,9 +5,9 @@
 # Complexity: O(log(n)) / O(1)
 #
 # Task: Given a signed 32-bit integer x, return x with its digits reversed. If reversing x causes
-# the value to go outside the signed 32-bit integer range [-231, 231 - 1], then return 0.
+# the value to go outside the signed 32-bit integer range [-2^31, 2^31 - 1], then return 0.
 # Hints:
-# (1) ...
+# (1) signed --> can be negative
 # (2)
 
 
@@ -15,13 +15,41 @@
 # Solution:
 class Solution:
     def reverse(self, x: int) -> int:
+        y = 0
+        if x == 0:
+            return 0  # trivial solution, also prevents div-by-0 error at next stage
+        sign = int(abs(x) / x)
+        x = abs(x)
+        
+        while x:
+            # print(sign, x, y)
+            y = 10 * y + (x % 10)  # grab the remainder
+            x = x // 10  # div by 10 to go to next digit
+            
+y = sign * y  # add the sign and ship it
+        if y >= 2**31 - 1:  # prevent overflow when multipled by 10
+            return 0
+
+        
+        return y
 
 
 # =================================================================================================
+# Complexity:
+# Time: n loops × (dict_lookup + list_push/pop + compare) = n × (1+1+1) --> O(n)
+# Space: at most n/2 open brackets in stack --> O(n)
+
+# =================================================================================================
 # Testing:
+# Simple test:
+sol = Solution()
+sol.reverse(120)
+
+# Batch test:
 CASES = [
-    (121, True),
-    (-121, False),
+    (123, 321),
+    (-321, -123),
+    (120, 21),
 ]
 
 METHODS = [

@@ -2,17 +2,7 @@
 LeetCode
 ========
 
-### Notes
-All scripts marked ✅ are clean (Ruff), tested (CI), and submitted (LC accepted).
-
-Hints are numbered as (i) to make inline commenting easier.
-
-Some scripts may explore different solutions or follow-up questions for practice.
-<br><br>
-
-CLI smoke test batch validates all given test cases (plus custom edge cases) for all solutions presented.
-
-\> python ~/Git/leetcode/0001.py --> ✅ (if all solutions pass all testcases)
+LeetCode solutions with time/space complexity and tags.<br>
 
 | Problem                                                                                                                                           | Solution          | Time      | Space     | Tags                          |
 |:--------------------------------------------------------------------------------------------------------------------------------------------------|:------------------|:---------:|:---------:|:------------------------------|
@@ -34,3 +24,17 @@ CLI smoke test batch validates all given test cases (plus custom edge cases) for
 |[0344. Reverse String](https://leetcode.com/problems/reverse-string)                                                                               |[⚠️Some](./0136.py)|O(n)       |O(1)       |2ptr, Recursion                |
 |[0628. Maximum Product of Three Numbers](https://leetcode.com/problems/maximum-product-of-three-numbers)                                           |[⚠️Some](./0628.py)|O(n)       |O(1)       |Greedy                         |
 |[0692. Top K Frequent Words](https://leetcode.com/problems/top-k-frequent-words)                                                                   |[⚠️Some](./0692.py)|           |           |                               |
+
+## Manual
+All scripts marked ✅ are clean (Ruff), tested (CI), and accepted (LC).
+
+Hints are numbered as (#) for easy referrals at inline comments.
+
+Scripts may contain more than 1 sol or follow-up Q.
+
+CLI smoke test batch validates all given test cases (plus custom edge cases) for all solutions presented.
+
+\> python ~/Git/leetcode/0001.py --> ✅ (if all solutions pass all testcases)
+
+## License
+This project is licensed under the BSD 3-Clause License.
