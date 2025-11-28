@@ -52,7 +52,7 @@ Already fluent in Python and want to skip to the fun part? 👉 [LeetCode](./lee
 
 
 ###
-<u>[ScriptPull.py](./ScriptPull.py):</u> Useful classes/methods to utilize in problems and projects.
+Helper classes/methods are utilized in problems:
   * Class import: ``` from helper_scripts import BinaryTree ```
   * Method import: ``` from helper_scripts import * quick_sort```
 
