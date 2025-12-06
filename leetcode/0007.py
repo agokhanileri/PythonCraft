@@ -20,24 +20,23 @@ class Solution:
             return 0  # trivial solution, also prevents div-by-0 error at next stage
         sign = int(abs(x) / x)
         x = abs(x)
-        
+
         while x:
             # print(sign, x, y)
             y = 10 * y + (x % 10)  # grab the remainder
             x = x // 10  # div by 10 to go to next digit
-            
-y = sign * y  # add the sign and ship it
-        if y >= 2**31 - 1:  # prevent overflow when multipled by 10
+
+        y = sign * y  # add the sign and ship it
+        if y >= 2**31 - 1:
             return 0
 
-        
         return y
 
 
 # =================================================================================================
 # Complexity:
-# Time: n loops × (dict_lookup + list_push/pop + compare) = n × (1+1+1) --> O(n)
-# Space: at most n/2 open brackets in stack --> O(n)
+# Time: main loop iterates for each digit d = log₁₀(x) --> O(log(d))
+# Space: y accumulator --> O(1)
 
 # =================================================================================================
 # Testing:

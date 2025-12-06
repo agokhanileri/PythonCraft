@@ -1,21 +1,29 @@
 name: pythoncraft
+
 channels: [conda-forge]
 channel_priority: strict  # avoids accidental pulls from the default channel
-dependencies:   # solver picks latest stable python available
 
+dependencies:   # solver picks latest stable python available
 # Python runtime: format —> lint —> typecheck —> test —> commit
 - python=3.13.*  	  # stdlib(os, math, pathlib, asyncio, etc.) + Cython
 - pip           	  # packaging, runtime
 - setuptools    		#
 - wheel         		#
 - ipython       		# improved REPL
-- black         	  # formatter
-- ruff              # linter
-- mypy          		# type-checker (static)
-- pytest        		# tester
-- pre-commit    		# keeps repo clean by auto-checking during git commits
-- llvm-openmp   	  # multithreading API used by NumPy, SciPy, scikit-learn etc.
+- spyder>=5.5,<6
+- spyder-kernels>=2,<3
+
+# Performance
+- llvm-openmp  # multithreading API used by NumPy, SciPy, scikit-learn etc.
 - ninja         		# fast low-level build tool auto-detected by cmake
-- pkg-config    		#
-- cmake         		# C/C++ or Fortran extensions
-# - cython      		# 2D/3D plotting in the IPython console
+- pkg-config    	#
+- cmake    		# C/C++ or Fortran extensions
+#- cython      		# 2D/3D plotting in the IPython console
+
+# Formatting
+- black         		# formatter
+- ruff          		# linter and import sorter
+- mypy          	# type-checker (static)
+- pytest        		# tester
+- pre-commit   	# keeps repo clean by auto-checking during git commits
+- rich             		# colored log + pretty print
