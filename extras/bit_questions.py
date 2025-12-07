@@ -1,89 +1,9 @@
-# Contents: Boolean Ops, Bitwise Ops, Bit Math, Bit Shifting, Bit Casting, Questions
-
-# -----------------------------------
-# Boolean Literals
-bool(-2)  # = True, only 0 is False
-not (False or True)  # = not True = False, boolean (logical) op
-2 in [1, 2, 3]  # = True, there exists or not
-False + True + 5  # = 0+1+5 = 6, boolean literals, OR-like
-2 != 4 > 2  # = (2 != 4) AND (4 > 2) = TRUE
-all([1, 0, 1])  # = False, AND operation
-any([False, True, False])  # = True, OR operation
-print(any([]), all([]))  # = False, True
-
-# 2's complement
-~0  # = inv(b00) = b11 = -1, bitwise op (2's complement)
-~1  # = inv(b01) = b10 = -2 = operator.xor_(0, 1)
-print(0 < a >= b)  # = (0 < a) AND (a >= b) = TRUE (doesn't check for 0 < b)
-
-a = b = 1
-a is b  # = True, same memory location (pointer to 1)
-a = b = [1, 2, 3]
-a is b  # = False, different memory allocations for arrays
-
-
-# -----------------------------------
-# Bitwise Ops
-bin(0b0110 + 0b0010)  # gives int by default, so need to cast
-bin(0b0110 + 0b0101)  # = 0001
-bin(0b0011 - 0b0010)  # = 0001
-bin(0b0110 - 0b0011)  # = 0011
-bin(0b1000 - 0b0110)  # = 0010
-bin(0b0011 * 0b0101)  # = 0011 + 100 + 1000 = 1111
-bin(0b0011 * 0b0011)  # = 0110
-bin(0b1101 ^ 0b0101)  # = XOR = 1000
-bin(0b1101 ^ 0b0101)  # = OR = 1000
-bin(0b0100 * 0b0011)  # = 1100 (4x = by 2)
-
-# -----------------------------------
-# Bit Shifting
-x = 5  # = 101 (3 bits)
-# Arihmetic shift (>>): keeps the sign bit (MSB)
-# Logical shift (>>>): push a 0 on the left (MSB)
-# x >>> 1  # = 0+10 = 2     --> no logical shift in Python
-x >> 1  # 101 >> 010 = 3 but Python only has Logical shift with but prefers unsigned
-# if you logical shift a negative number too much it'll be -1-1-1... = -1 signed int
-
-bin(0b1101 >> 2)  # = push 0s on left: --> 0110 --> 0011
-~x  # = -(x+1) = -6 --> assumes signed (2s comp) -->
-
-
-def bit_not(x, num_bits):  # deals with unsigned (invert each bit)
-    return (1 << num_bits) - 1 - x  # get 1000-1 = 111 and subtract x from 111
-
-
-bit_not(x, 3)  # = 010 = 0b10 = 2
-bin(0b1101 ^ bit_not(0b1101, 4))  # 1101 XOR 0010 = 1111
-bin(1011 & (bit_not(0, 1) << 2))  # = 1011 and 0100 = 0000 --> Gayle says 1000?
-
-
-# -----------------------------------
-# Bit Casting:
-char1 = "4"
-int1 = 11
-int2 = 3
-str1 = "101"
-type(char1)  # type of both char and string is str
-i = ord(char1)  # = 4
-b = int(str1, 2)  # = 5
-f = float(str1)  # = 101.0
-h = hex(int1)  # = 0xb
-c = complex(int1, int2)
-s = str(int1)  # "int1"
-print("i=%, b=%, f=%, h=%, c=%, s=%", i, b, f, h, c, s)
-
-a = "asd"
-b = b"asd"  # string and variables are case sensitive, bytes are not
-c = a.encode("ASCII")  # string to byte, via ascii or utf-8  --> c=b
-d = c.decode("ASCII")  # decode back to string --> d=a
-
 
 # -----------------------------------
 # QUESTIONS
 # -----------------------------------
 # BitOps 01: Function to get the i-th bit
 x = 5
-
 
 # Sol:
 def getbit(x, i):

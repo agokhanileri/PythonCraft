@@ -18,7 +18,8 @@ print("- Start with an imperative verb phrase and end with a period.")
 print("- First line ≤ 72 chars summary, then a blank line, then details/sections as needed.")
 print("- Prefer Google-style sections: Args, Returns, Raises, Examples.")
 print("Ex:")
-print('''\
+print(
+    '''\
 def resample(signal, rate):
     """Resample a signal to the target rate.
 
@@ -32,7 +33,8 @@ def resample(signal, rate):
     Raises:
       ValueError: If rate <= 0 or signal is empty.
     """
-''')
+'''
+)
 
 # =================================================================================================
 print("\n3) Indenting:")
@@ -41,12 +43,14 @@ print("- One blank line between related blocks; two between top-level defs.")
 print("- Don't try to align operators with extra spaces like my_var   = 1")
 print("- Align continued lines with (again) 4 spaces under an opening delimiter.")
 print("Ex:")
-print('''\
+print(
+    """\
 items = [
     "alpha",
     "beta",
 ]
-''')
+"""
+)
 
 # =================================================================================================
 print("\n4) Spacing:")
@@ -64,45 +68,54 @@ print("- Use triple single quotes for quoting a string.")
 print("Ex:")
 print('''str = "Can't connect: retrying"''')
 
-      
 # =================================================================================================
 print("\n6) Wrapping:")
 print("- Default is 80; this project uses 99.")
 print("- Break BEFORE operators (and, or etc.) in LONG expressions to keep diffs tidy.")
-print('''\
+print(
+    """\
 is_valid = (
     lower_bound <= value
     and value <= upper_bound
 )
-''')
-
+"""
+)
 
 # =================================================================================================
 print("\n7) Naming:")
-print("- Modules and functions: snake_case. Classes: CapWords. Constants: UPPER_SNAKE.")
+print("- Modules/Functions: snake_case, Classes: CapWords, Constants: UPPER_SNAKE")
+print("- Ex: my_var, my_method, MyClass, MY_CONSTANT")
+print("- No special chars, separate by '_', no starting with digits.")
+print("Don't use ambigous 'l', 'O', 'I' letters.")
+print("Use type hinting and Protocol for duck typing.")
 print("- Booleans should mean a clear yes/no: is_ready, has_value, should_update.")
 print("- Avoid abbreviations unless they are obvious or industry-standard or covered in README.")
-print("\Ex:")
-print('''\
+print("Ex:")
+print(
+    """\
 MAX_RETRIES = 3
 
 class FrameDecoder:
     def is_ready(self) -> bool:
         return True
-''')
+"""
+)
+
 
 # =================================================================================================
 print("\n8) Importing:")
 print("- Coarse order: stdlib → 3rd-party → user/local. Fine order: Alphabetical.")
 print("- Prefer explicit imports over wildcard imports.")
 print("- Use relative imports only within a package and only one level deep.")
+print("- Import as __all__ for public APIs to avoid surprises.")
 
 # =================================================================================================
 print("\n9) Error handling")
 print("- Validate inputs at boundaries and raise ValueError/TypeError early.")
 print("- Preserve tracebacks with 'raise ***_error from e' when adding context.")
-print("\Ex:")
-print('''\
+print("Ex:")
+print(
+    """\
 def divide(a, b):
     #  Compute safe division with input validation.
     if b == 0:
@@ -111,19 +124,15 @@ def divide(a, b):
         return a / b
     except Exception as e:
         raise RuntimeError("division failed") from e
-''')
+"""
+)
 
 # =================================================================================================
 print("\n10) Overall:")
-# - lookup order: current dir > PYTHONPATH > default path
-# -------------------------------------------------------------------------------------------------
-# Identifiers: No special chars, separate by "_", no starting with digits
-# - my_var, my_method, MyClass, MY_CONSTANT --> no My_Constant (ugly)
-# - Don't use 'l', 'O', 'I' letters --> confusing
-# -------------------------------------------------------------------------------------------------
-# Namespaces: lookup order is Local > Enclosed > Global > Built-in
-# Encoding: Python2 used ASCII, whereas Python3 uses UTF-8. Other encodings are for testing or foreign chars
-      
+print("- Use ruff/black/pre-commit locally to keep diffs minimal.")
+print("- Namespaces lookup order: Local > Enclosed > Global > Built-in")
+print("- File lookup order: current dir > PYTHONPATH > default path")
+
 # 1) Module docstring (if any)
 
 # 2a) __future__ imports (must be here, after docstring, before anything else)
@@ -140,24 +149,26 @@ print("\n10) Overall:")
 # 6) Internal helpers prefixed with _
 
 # 7) CLI entry guard __main__ (if executable and want to mask printing)
-   
-    
-
-print("Ex: Enchancing a function")
+print("\nEx: Enchancing a function")
 print("Before:")
-print('''\
+print(
+    """\
 def run(a,b): #process
   if not a: raise Exception("bad")
   r=f(a,b) # calc
   return r
-''')
+"""
+)
 print("After:")
-print('''\
+print(
+    '''\
 def run(a: int, b: int) -> int:
     """Process validated inputs and return the computed result."""
-    
+
     if a is None:  # reject missing primary operand
         raise ValueError("a must be provided")
     result = f(a, b)  # compute core transform
+
     return result
-''')
+'''
+)
