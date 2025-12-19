@@ -20,7 +20,6 @@ class RunStats(NamedTuple):
     errors: int
     ruff: str
     black: str
-    pre_commit: str
     pytest: str
 
 
@@ -119,7 +118,7 @@ def optional_black(root: Path) -> str:
     return "0"
 
 
-def gather_stats(root: Path, pre_commit: str, pytest: str) -> RunStats:
+def gather_stats(root: Path, pytest: str) -> RunStats:
     files = python_files(root)
     errors, runtime = run_scripts(files)
 
@@ -130,30 +129,23 @@ def gather_stats(root: Path, pre_commit: str, pytest: str) -> RunStats:
         errors=errors,
         ruff=optional_ruff(root),
         black=optional_black(root),
-        pre_commit=pre_commit,
         pytest=pytest,
     )
 
 
 def print_block(name: str, stats: RunStats) -> None:
-    print(name)
+    print(f"> {name}:")
     print(f"files: {stats.files}")
-    print(f"lines: {stats.lines}")
-    print(f"runtime: {stats.runtime:.2f} sec")
+    print(f"LoC: {stats.lines}")
+    print(f"runtime: {stats.runtime:.1f} sec")
     print(f"errors: {stats.errors}")
     print(f"black: {stats.black}")
     print(f"ruff: {stats.ruff}")
-    print(f"pre-commit: {stats.pre_commit}")
     print(f"pytest: {stats.pytest}")
 
 
 def main() -> None:
     parser = argparse.ArgumentParser(description=__doc__)
-    parser.add_argument(
-        "--pre-commit",
-        default="",
-        help="Optional pre-commit notes or status to include in the summary.",
-    )
     parser.add_argument(
         "--pytest",
         default="",
@@ -161,8 +153,8 @@ def main() -> None:
     )
     args = parser.parse_args()
 
-    tutorial_stats = gather_stats(CATEGORIES["Tutorial"], args.pre_commit, args.pytest)
-    leetcode_stats = gather_stats(CATEGORIES["LeetCode"], args.pre_commit, args.pytest)
+    tutorial_stats = gather_stats(CATEGORIES["Tutorial"], args.pytest)
+    leetcode_stats = gather_stats(CATEGORIES["LeetCode"], args.pytest)
 
     print_block("Tutorial", tutorial_stats)
     print()
@@ -171,3 +163,4 @@ def main() -> None:
 
 if __name__ == "__main__":
     main()
+    

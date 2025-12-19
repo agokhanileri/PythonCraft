@@ -1,0 +1,29 @@
+name: pythoncraft
+
+channels: [conda-forge]
+channel_priority: strict  # avoids accidental pulls from the default channel
+
+dependencies:   	# solver picks latest stable python available
+# Python runtime:
+- python=3.12.*	  	# stdlib(os, math, pathlib, asyncio, etc.) + Cython
+- pip           	 	 	# packaging, runtime
+- setuptools    		#
+- wheel         		#
+- ipython       		# improved REPL
+- spyder>6 			# spyder version 6+
+- spyder-kernels>3 # spyder kernels version 3+
+
+# Performance
+- llvm-openmp  	# multithreading API used by NumPy, SciPy, scikit-learn etc.
+#- ninja         			# fast low-level build tool auto-detected by cmake
+#- pkg-config    		#
+#- cmake    			# for C/C++ or Fortran extensions
+#- cython      			# for C/C++ extensions
+
+# Quality
+- black         			# formatter
+- ruff          			# linter
+- mypy          		# type-checker (static)
+- pytest        			# tester
+- pre-commit   		# committer (git)
+- rich             			# colored log + pretty print
